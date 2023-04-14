@@ -22,7 +22,8 @@ If no flags are provided, the script will install all packages from the list.
 This script checks for the existence of a GCP resource. It only performs read operations. It currently supports these features.
 
 ```bash
-Usage: ./check-gcp-resources.sh [project_id] [flags]
+Usage: check-gpc-resources.sh [project_id] [flags]
+Example: check-gpc-resources.sh my-project-id -pcdbu
 Flags:
   -h: Show help and usage information
   -p: Show project metadata
@@ -33,6 +34,7 @@ Flags:
   -g: List IAM groups
   -u: List IAM users
   -s: List IAM service accounts
+  -a: List all resources
 ```
 
 Before using the script, make sure you export the following environment variables before running the script.
