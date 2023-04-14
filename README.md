@@ -25,6 +25,7 @@ This script checks for the existence of a GCP resource. It only performs read op
 Usage: ./check-gcp-resources.sh [project_id] [flags]
 Flags:
   -h: Show help and usage information
+  -p: Show project metadata
   -k: Check if the service account key file exists
   -c: List Compute Engine instances
   -d: List Cloud SQL instances
@@ -32,7 +33,6 @@ Flags:
   -g: List IAM groups
   -u: List IAM users
   -s: List IAM service accounts
-If no flags are provided, the script will return metadata about the project.
 ```
 
 Before using the script, make sure you export the following environment variables before running the script.

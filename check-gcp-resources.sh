@@ -5,11 +5,12 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 
-Show help message
+# Show help message
 function show_help() {
     echo -e "Usage: $0 [project_id] [flags]"
     echo "Flags:"
     echo "  -h: Show help and usage information"
+    echo "  -p: Show project metadata"
     echo "  -k: Check if the service account key file exists"
     echo "  -c: List Compute Engine instances"
     echo "  -d: List Cloud SQL instances"
@@ -17,7 +18,6 @@ function show_help() {
     echo "  -g: List IAM groups"
     echo "  -u: List IAM users"
     echo "  -s: List IAM service accounts"
-    echo "If no flags are provided, the script will return metadata about the project."
 }
 
 # Load the GOOGLE_APPLICATION_CREDENTIALS environment variable
@@ -88,7 +88,8 @@ function show_project_metadata() {
 function main() {
     # Check if the project_id is provided
     if [ $# -lt 2 ]; then
-        echo -e "${RED}No project ID provided. Please provide a project ID as an argument.${NC}"
+        echo -e "${RED}Please use a flag to check a resource.${NC}"
+        show_help
         exit 1
     fi
 
@@ -110,7 +111,7 @@ function main() {
         -c)
             list_compute_instances "$project_id"
             ;;
-        -s)
+        -d)
             list_cloudsql_instances "$project_id"
             ;;
         -b)
