@@ -1,5 +1,6 @@
 # shell-utils
-A set of shell utilities and scripts to perform various local and cloud tasks
+
+A set of shell utilities and scripts to perform various local and cloud tasks. They are mostly used for my personal needs, feel free to use them as you see fit (at your own risk). I will try to keep them up to date as I add more scripts and utilities.
 
 ## List of scripts and utilities
 
