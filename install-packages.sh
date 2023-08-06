@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO: install skaffold, kubectl, kubectx, kubens, k9s, helm, helmfile, kustomize, stern, kubeseal, k
+
 # Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
