@@ -45,3 +45,7 @@ export GOOGLE_APPLICATION_CREDENTIALS="/path/to/service-account-key.json"
 ```
 
 You also need to make sure that the service account has access to the resources you are trying to check.
+
+### s3_transfer.sh
+
+TBD
