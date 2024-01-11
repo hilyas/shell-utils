@@ -49,3 +49,30 @@ You also need to make sure that the service account has access to the resources 
 ### s3_transfer.sh
 
 TBD
+
+### check-aws-resources.sh
+
+The script checks for the existance of an AWS resource. It only performs read operations. It currently supports these features:
+
+```bash
+Usage: check-aws-resources.sh [flags] [--profile PROFILE_NAME] [--region REGION]
+Example: ./check-aws-resources.sh -esri --profile sandbox-admin --region us-west-2
+Options:
+  --profile PROFILE_NAME: Specify the AWS profile to use
+  --region REGION: Specify the AWS region to use
+Flags:
+  -h: Show help and usage information
+  -e: List EC2 instances
+  -s: List S3 buckets
+  -r: List RDS instances
+  -i: List IAM users
+  -a: List all resources
+```
+
+### ping-db.sh  
+
+Currently support PostgreSQL only.
+
+```bash
+./ping-db.sh '"host=<hostname> port=5432 dbname=postgres user=postgres password=SecurePassword123"'
+```
